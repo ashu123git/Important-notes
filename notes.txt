@@ -1,3 +1,7 @@
 1> Search in a Rotated Sorted array:-
 
-	
+	First of all find the pivot element(A pivot element is the one jiske just aage aur just piche dono small elements honge). 
+	Once the pivot element is found now check if the target element is smaller that 0th element then the element should be present
+	in between 0 to pivot-1 else the element must be between pivot+1 to n-1 else -1.
+
+	So now perform binary search for all these two cases.
