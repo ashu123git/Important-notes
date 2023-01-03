@@ -5,3 +5,19 @@
 	in between 0 to pivot-1 else the element must be between pivot+1 to n-1 else -1.
 
 	So now perform binary search for all these two cases.
+
+2> Minimum swaps required to sort the array:-
+
+	Here, we don't need to apply merge sort because wo wala approach tab lgta hai jab "total steps required to sort the array" aisa
+	likh ke aaye.
+	
+	In this question, create a vector of pairs. In pair, first element will be the arr[i] and second element will be "i".
+	Now sort this vector. We will get the sorted arr with their indexes. For example.
+	arr = [2, 8, 5, 4]. In vector, it will be [[2, 0], [8, 1], [5, 2], [4, 3]]. After sorting, it will become-
+	[[2, 0], [4, 3], [5, 2], [8, 1]]
+
+	Now run a for loop and do the following if v[i].second != i :-
+		swap(v[i], v[v[i].second])
+		i -= 1;  // ye wala isliye kiya kyuki swap krne ke baad hum wapis se check karenge ki i ke barabar hua ya nhi v[i].second
+		count += 1;
+
