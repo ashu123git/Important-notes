@@ -21,3 +21,29 @@
 		i -= 1;  // ye wala isliye kiya kyuki swap krne ke baad hum wapis se check karenge ki i ke barabar hua ya nhi v[i].second
 		count += 1;
 
+3> Aggresive Cows:-
+
+	Here we are given an array of n size which contains the position of stalls and we are also given K cows and we have to assign the
+	cows to stalls such that minimum distance between any two of them is as large as possible.
+
+	For any questions of these types use binary search:-
+		Here Take min = 0; max = max(arr) - min(arr); // Array must be sorted.
+		Now we will find mid.
+		Until min <= max:- Do the following-
+			if mid we found in above step is a valid mid then store the value of mid in answer and move min to mid+1.
+				// ye isliye kiya kyuki agar cows mid distance me set ho ja rhi hai to uske aage bhi ho hi jayengi
+				   aur hume max answer chahiye to hum aur aage ja rhe hain.
+			else move max to mid-1;
+			find mid again.
+		To check whether a particular mid is a valid mid or not, do the following:-
+			Take cowCount = 1 // Initially hum ek cow leke chal rhe hain aur tab tak chalenge jab tak sari cows na le len.
+			initialPos = arr[0] // [1, 2, 3, 4, 6] Isme initial position arr[0] lenge aur final position ek for loop lga ke lete rahenge.
+			Now use one for loop for 0 to n-1 and do the following:-
+				if(arr[i]-initialPos) >= mid { //Valid Case. Mtlb mid distance pe hum cow ko place kr sakte hain
+								//Agar less than mid aayega to hum place nhi kr sakte.
+					cowCount++; // Ek couw ko place kr denge. Fir check krenge ki cows puri to nhi hogyi.
+					if(cowcount==k) return true;
+					Agar puri nhi hui cows to initialPos ko arr[i] ke equal kar ke agli cow ke liye...
+			Agar pura for loop chal gya aur ans true return nhi hua to iska mtlb valid mid nhi hai. False
+
+4
