@@ -58,4 +58,17 @@
 				  Isliye end array ke basis pe sort karenge that is [(3, 2), (5, 4), (6, 1)]. Aur ab ek loop lga ke check karenge :-
 										if(pairs[curr].first < pairs[i].second) then ans += 1 and curr = i; 
 
-5>
+5> Fractional Knapsack problem:-
+
+	Given weights and values of N items, we need to put these items in a knapsack of capacity W to get the maximum total value in the knapsack.
+	Note: Unlike 0/1 knapsack, you are allowed to break the item. 
+	Here we have to create a vector of pairs where first value will be values[i]/weight[i] and second value will be i.
+	Now sort this vector in decreasing order. Ye hum isiliye kr rhe hain kyuki jiska fraction sabse jyada hoga uski value lenge to ans maximum aane ke chances jyada honge.
+	For example, we have given W = 50, n = 3, values[] = {60, 100, 120}, weight[] = {10, 20, 30}. Here ans = 240
+	because for weight = 10, it is less that W, therefore ans = 60 and W = W-10 = 40
+		for weight = 20, it is less that W, therefore ans = 60+100 and W = 40-20 = 20
+		for weight = 30, it is greater than W, therefore we skip this. Now since all the elements are visited and W zero nhi hua
+		therefore last wale me le nhi paye the isiliye ans = ans + iss i ke liye pair pe jo bhi first value hogi usse W ko multiply kr denge.
+		therefore ans = 60+100+(4*20)
+
+6> 
