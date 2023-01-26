@@ -46,4 +46,16 @@
 					Agar puri nhi hui cows to initialPos ko arr[i] ke equal kar ke agli cow ke liye...
 			Agar pura for loop chal gya aur ans true return nhi hua to iska mtlb valid mid nhi hai. False
 
-4
+4> Activity selection problem:-
+
+	Here we are given two arrays, start and end, in which the start time and end time of a meeting is given. Find maximum
+	meetings that can take place if one meeting can be done only at a time.
+		Here, we have to make pairs of start and end and then push in a vector and then sort the vector based on end wali array.
+		We are sorting based on end because agar start ke basis pe sort karenge to ek limitation aa jayegi. For example, start and end are as follows:-
+		start = [1, 2, 4]
+		end =   [6, 3, 5] Here vector of pairs will be [(1, 6), (2, 3), (4, 5)]. Yahan since first wala 1 pe start hoke 6 pe end ho rha hai isliye ye select hojayega 
+				  kyuki ye 1 pe start hua aur baki select nhi ho payenge kyuki ye 6 pe end ho rha hai isliye ans 1 aayega jo ki maximum nhi hai. Ans is 2.
+				  Isliye end array ke basis pe sort karenge that is [(3, 2), (5, 4), (6, 1)]. Aur ab ek loop lga ke check karenge :-
+										if(pairs[curr].first < pairs[i].second) then ans += 1 and curr = i; 
+
+5>
