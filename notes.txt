@@ -71,4 +71,21 @@
 		therefore last wale me le nhi paye the isiliye ans = ans + iss i ke liye pair pe jo bhi first value hogi usse W ko multiply kr denge.
 		therefore ans = 60+100+(4*20)
 
-6> 
+6> Minimum platform problem:-
+
+	This question is similar to activity selection problem. Bus difference itna hai ki isme train ka arrival aur departure mixed hai aur kisi ek train ke arrival
+	aur usi ka departure nhi hai, sabhi trains ka mixed hai. To isme simply dono arrival aur departure ko sort krlo.
+	Fir ye:-
+		while(i<n && j<n) {
+            if(arr[i] <= dep[j]) {
+                i += 1;
+                curr += 1;
+            }
+            else {
+                j += 1;
+                curr -= 1;
+            }
+            ans = max(ans, curr);
+        }
+
+7> 
